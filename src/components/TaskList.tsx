@@ -12,6 +12,7 @@ import {
   Grid,
 } from "@mui/material";
 import { Edit, Delete, CheckCircle } from "@mui/icons-material";
+import Navbar from "./Navbar";
 
 const TaskList: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -68,6 +69,8 @@ const TaskList: React.FC = () => {
   );
 
   return (
+    <>
+    <Navbar/>
     <div style={{ padding: "20px" }}>
       <Typography variant="h4" gutterBottom>
         Task List
@@ -146,6 +149,7 @@ const TaskList: React.FC = () => {
         ))}
       </Grid>
     </div>
+    </>
   );
 };
 

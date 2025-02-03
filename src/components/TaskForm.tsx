@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createTask } from "../api/api";
 import { TextField, Button, Card, CardContent, Typography } from "@mui/material";
+import Navbar from "./Navbar";
 
 const TaskForm: React.FC<{ onTaskAdded: () => void }> = ({ onTaskAdded }) => {
   const [title, setTitle] = useState("");
@@ -15,6 +16,8 @@ const TaskForm: React.FC<{ onTaskAdded: () => void }> = ({ onTaskAdded }) => {
   };
 
   return (
+    <>
+    <Navbar />
     <Card elevation={3} sx={{ padding: "16px", marginBottom: "20px" }}>
       <CardContent>
         <Typography variant="h5" gutterBottom>
@@ -51,6 +54,7 @@ const TaskForm: React.FC<{ onTaskAdded: () => void }> = ({ onTaskAdded }) => {
         </form>
       </CardContent>
     </Card>
+    </>
   );
 };
 
